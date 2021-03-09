@@ -64,7 +64,7 @@ namespace Native.App.Export
 			// 反射获取 AppData 实例	
 			Type appDataType = typeof (AppData);	
 			// 注册一个 CQApi 实例	
-			AppInfo appInfo = new AppInfo ("cn.mikualpha.orderlimit", 1, 9, "插件命令调用限制", "1.0.0", 1, "初音未来Alpha", "插件命令调用限制", authCode);	
+			AppInfo appInfo = new AppInfo ("cn.mikualpha.orderlimit", 1, 9, "插件命令调用限制", "1.0.1", 2, "初音未来Alpha", "插件命令调用限制", authCode);	
 			appDataType.GetRuntimeProperty ("CQApi").GetSetMethod (true).Invoke (null, new object[] { new CQApi (appInfo) });	
 			AppData.UnityContainer.RegisterInstance<CQApi> ("cn.mikualpha.orderlimit", AppData.CQApi);	
 			// 向容器注册一个 CQLog 实例	
